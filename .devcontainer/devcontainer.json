@@ -2,8 +2,10 @@
 	"name": "Debian",
 	"image": "mcr.microsoft.com/devcontainers/base:bookworm",
 	"features": {
-		"ghcr.io/stu-bell/devcontainer-features/node:0": {}
+		"ghcr.io/devcontainers/features/node:2": {},
+		"ghcr.io/devcontainers-community/npm-features/typescript:1": {}
 	},
+	"postCreateCommand": "bash setup.sh",
 	"forwardPorts": [5173],
 	"remoteUser": "vscode"
 }
