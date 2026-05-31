@@ -1,0 +1,9 @@
+{
+	"name": "Debian",
+	"image": "mcr.microsoft.com/devcontainers/base:bookworm",
+	"features": {
+		"ghcr.io/stu-bell/devcontainer-features/node:0": {}
+	},
+	"forwardPorts": [5173],
+	"remoteUser": "vscode"
+}
