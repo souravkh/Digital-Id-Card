@@ -1,0 +1,16 @@
+{
+  "name": "First Last Name",
+  "title": "Full Stack Developer",
+  "image": "/src/data/profile.svg",
+  "experience": "3",
+  "education": "B.Tech Computer Science",
+
+  "skills": ["React", "Node.js", "Python", "CSS"],
+
+  "links": {
+    "portfolio": "https://urportfoliosite.com",
+    "linkedin": "https://linkedin.com/in/yourname",
+    "github": "https://github.com/yourname",
+    "email": "someone@someone.com"
+  }
+}

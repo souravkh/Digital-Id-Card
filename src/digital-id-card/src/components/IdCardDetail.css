@@ -1,0 +1,331 @@
+/* ══════════════════════════════════════
+   PAGE WRAPPER
+══════════════════════════════════════ */
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* ══════════════════════════════════════
+   CARD SHELL — light glassmorphism
+══════════════════════════════════════ */
+.id-card {
+    width: 320px;
+    border-radius: 28px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    /* Soft light glass border */
+    border: 1px solid rgba(255, 180, 100, 0.45);
+
+    /* Soft card shadow on light bg */
+    box-shadow:
+        0 4px 16px rgba(255, 120, 30, 0.15),
+        0 20px 60px rgba(200, 80, 0, 0.25),
+        0 1px 0 rgba(255, 255, 255, 0.9) inset;
+}
+
+/* ══════════════════════════════════════
+   TOP SECTION — orange gradient + photo
+══════════════════════════════════════ */
+.card-top {
+    position: relative;
+    background: linear-gradient(
+        160deg,
+        #ffb347 0%,
+        #ff7b00 55%,
+        #e04800 100%
+    );
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 36px;
+}
+
+/* Lanyard hole at the top */
+.lanyard-hole {
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    box-shadow:
+        inset 0 2px 6px rgba(0, 0, 0, 0.15),
+        0 0 10px rgba(255, 200, 100, 0.5);
+}
+
+/* Glass ring around avatar */
+.avatar-ring {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:
+        0 0 0 3px rgba(255, 200, 120, 0.5),
+        0 8px 24px rgba(180, 60, 0, 0.25);
+    z-index: 2;
+}
+
+/* Avatar circle */
+.avatar {
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    background: linear-gradient(135deg, #ffb347 0%, #c73d00 100%);
+}
+
+/* Profile image fills the avatar circle */
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       /* crops image to fill circle, no stretching */
+    display: block;
+}
+
+/* Availability badge — sits below avatar inside card-top */
+.availability-badge {
+    position: absolute;
+    bottom: 60px;            /* sits just above the wave */
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: #fff;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+/* Wave SVG — matches light glass bottom */
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+}
+
+/* ══════════════════════════════════════
+   BOTTOM SECTION — light glassmorphism
+══════════════════════════════════════ */
+.card-bottom {
+    /* Light glass effect */
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
+    /* Subtle top separator */
+    border-top: 1px solid rgba(255, 180, 100, 0.3);
+
+    padding: 22px 28px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.card-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #3d1500;               /* warm dark brown — readable on light bg */
+    letter-spacing: 0.3px;
+    margin: 0;
+}
+
+.card-role {
+    font-size: 13px;
+    color: #b85500;               /* medium orange — visible on light */
+    letter-spacing: 0.8px;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Orange glow divider */
+.card-divider {
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255, 120, 30, 0.6),
+        transparent
+    );
+    margin: 10px 0 6px;
+    box-shadow: 0 0 6px rgba(255, 100, 0, 0.3);
+}
+
+/* Info list */
+.card-info {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.card-info li {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12.5px;
+}
+
+.info-label {
+    font-weight: 700;
+    color: #3d1500;               /* warm dark — strong contrast on light */
+    min-width: 58px;
+    text-align: left;
+    letter-spacing: 0.5px;
+}
+
+.info-sep {
+    color: #cc6600;
+    font-weight: 600;
+}
+
+.info-value {
+    color: #5c2d00;
+    font-size: 12.5px;
+}
+
+/* ══════════════════════════════════════
+   SECTION LABEL (Skills / Project / Connect headings)
+══════════════════════════════════════ */
+.section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #cc6600;
+    margin: 4px 0 4px;
+    width: 100%;
+    text-align: left;
+}
+
+/* ══════════════════════════════════════
+   SKILLS
+══════════════════════════════════════ */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;             /* wraps to next line if too many */
+    gap: 6px;
+    width: 100%;
+}
+
+.skill-badge {
+    background: rgba(255, 130, 30, 0.12);
+    border: 1px solid rgba(255, 130, 30, 0.35);
+    color: #a33d00;
+    font-size: 10.5px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.3px;
+}
+
+/* ══════════════════════════════════════
+   MAJOR PROJECT
+══════════════════════════════════════ */
+.project-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    background: rgba(255, 140, 30, 0.1);
+    border: 1px solid rgba(255, 140, 30, 0.3);
+    border-radius: 10px;
+    padding: 8px 12px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.project-card:hover {
+    background: rgba(255, 140, 30, 0.2);
+}
+
+.project-name {
+    font-size: 12px;
+    font-weight: 700;
+    color: #7a2500;
+    text-align: left;
+}
+
+.project-desc {
+    font-size: 10.5px;
+    color: #5c3010;
+    text-align: left;
+    line-height: 1.4;
+}
+
+/* ══════════════════════════════════════
+   CONNECT LINKS
+══════════════════════════════════════ */
+.links-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* 4 columns for icons */
+    gap: 8px;
+    width: 100%;
+}
+
+.link-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 150, 50, 0.3);
+    border-radius: 8px;
+    padding: 8px;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.link-item:hover {
+    background: rgba(255, 140, 30, 0.2);
+    transform: translateY(-2px);
+}
+
+.link-item i {
+    font-size: 18px;
+    color: #e04800;
+}
+
+/* ══════════════════════════════════════
+   WATERMARK
+══════════════════════════════════════ */
+.watermark {
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(200, 100, 50, 0.4);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.watermark >span{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
