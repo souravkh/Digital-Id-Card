@@ -2,7 +2,9 @@
 
 > A glassmorphism-styled digital identity card for developers — built with React & TypeScript. No coding required. Just update a JSON file and your card is ready.
 
+![Id Card Template](preview/previewidcard.png)
 
+![Demo](preview/demo.gif)
 ---
 
 ## ✨ What is this?
@@ -145,12 +147,11 @@ Want to add features or improve the card? Contributions are welcome!
 5. Open a Pull Request
 
 ---
-
+![Demo](preview/demo.gif)
+---
 ## ⭐ Show Your Support
 
 If this project helped you or you liked the idea, please consider giving it a **star** on GitHub — it means a lot and helps others discover it!
-
-[![GitHub stars](https://img.shields.io/github/stars/souravkh/Digital-Id-Card?style=social)](https://github.com/souravkh/Digital-Id-Card/stargazers)
 
 ---
 
