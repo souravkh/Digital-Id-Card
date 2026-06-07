@@ -11,9 +11,9 @@
 
 Everyone has a portfolio website. But corporates have **ID cards**.
 
-So I built one for developers.
+So I built one for all.
 
-This project generates a sleek, professional digital ID card that shows your identity at a glance — name, designation, experience, education, skills, and social links. All powered by a single JSON file. No React knowledge needed. No CSS tweaking. Just your details.
+This project generates a sleek, professional digital ID card that shows your identity at a glance — name, designation, experience, education, major skills, and social links. All powered by a single JSON file. No React knowledge needed. No CSS tweaking. Just your details.
 
 > Built while learning React — this is my hands-on learning project combining React, TypeScript, Glassmorphism UI, and Dev Containers.
 
