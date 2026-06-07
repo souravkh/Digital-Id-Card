@@ -30,23 +30,8 @@ function IdCardDetail() {
                     {/* Name & Title */}
                     <h2 className="card-name">{profile.name}</h2>
                     <p className="card-role">{profile.title} | {profile.experience} YOE</p>
-
-                    {/* <div className="card-divider"></div> */}
-
-                    {/* Quick Info */}
-                    {/* <ul className="card-info">
-                        <li>
-                            <span className="info-label">Experience</span>
-                            <span className="info-sep">:</span>
-                            <span className="info-value">{profile.experience}</span>
-                        </li>
-                        <li>
-                            <span className="info-label">Education</span>
-                            <span className="info-sep">:</span>
-                            <span className="info-value">{profile.education}</span>
-                        </li>
-                    </ul> */}
-
+                    <p className="card-specialization">{profile.education}</p>
+                    
                     <div className="card-divider"></div>
 
                     {/* Skills */}
